@@ -1,0 +1,27 @@
+/* Site de formation à distance — pular en écriture arabe (ajami harmonisé) */
+/* Conçu pour être très léger : aucune police externe, aucune image. */
+*{margin:0;padding:0;box-sizing:border-box}
+html{font-size:17px}
+body{font-family:"Noto Naskh Arabic","Amiri","Scheherazade New",Tahoma,serif;background:#fdfcf8;color:#1d2733;line-height:1.9;direction:rtl}
+header{background:#0d5c46;color:#fff;padding:1rem 1.2rem;text-align:center}
+header h1{font-size:1.35rem;font-weight:700}
+header p{font-size:.85rem;opacity:.9}
+nav{background:#0a4a38;display:flex;flex-wrap:wrap;justify-content:center}
+nav a{color:#eaf5f1;text-decoration:none;padding:.55rem 1rem;font-size:.95rem}
+nav a:hover,nav a[aria-current]{background:#0d5c46}
+main{max-width:46rem;margin:0 auto;padding:1.2rem}
+h2{color:#0d5c46;font-size:1.2rem;margin:1.2rem 0 .6rem;border-bottom:2px solid #0d5c46;padding-bottom:.25rem}
+h3{font-size:1.05rem;margin:1rem 0 .4rem}
+p,li{margin-bottom:.5rem}
+ul{padding-right:1.4rem}
+table{width:100%;border-collapse:collapse;margin:.8rem 0;font-size:.95rem}
+th,td{border:1px solid #cfd8d3;padding:.45rem .6rem;text-align:center}
+th{background:#e7f1ec;color:#0d5c46}
+.card{background:#fff;border:1px solid #d8e2dc;border-radius:.5rem;padding:1rem;margin:.8rem 0}
+.btn{display:inline-block;background:#0d5c46;color:#fff;text-decoration:none;padding:.5rem 1.1rem;border-radius:.4rem;font-size:.95rem;border:none;cursor:pointer;font-family:inherit;margin:.2rem}
+.btn.secondary{background:#fff;color:#0d5c46;border:1px solid #0d5c46}
+.btn:hover{opacity:.9}
+.small{font-size:.8rem;color:#5a6b63}
+.fr{font-size:.85rem;color:#5a6b63;direction:ltr;text-align:left}
+.ok{color:#0d5c46;font-weight:700}
+footer{background:#0a4a38;color:#cfe5dc;text-align:center;padding:1rem;font-size:.8rem;margin-top:2rem}
