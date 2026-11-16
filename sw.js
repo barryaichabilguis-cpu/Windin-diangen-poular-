@@ -1,8 +1,8 @@
 /* Cache hors-ligne minimal : réseau d'abord (contenu frais), cache en secours (hors-ligne). */
-var CACHE = 'jangirde-v5';
+var CACHE = 'jangirde-v6';
 var PAGES = [
   './', 'index.html', 'style.css', 'guide.html', 'clavier.html',
-  'lecons/lecon-01.html', 'lecons/lecon-02.html', 'lecons/lecon-03.html',
+  'lecons/lecon-01.html', 'lecons/lecon-03.html',
   'lecons/lecon-04.html', 'lecons/lecon-05.html',
   'lecons/lecon-06.html', 'lecons/lecon-07.html', 'lecons/lecon-08.html',
   'lecons/lecon-09.html', 'lecons/lecon-10.html', 'lecons/lecon-11.html',
