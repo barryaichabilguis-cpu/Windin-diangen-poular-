@@ -1,12 +1,15 @@
 /* Cache hors-ligne minimal : réseau d'abord (contenu frais), cache en secours (hors-ligne). */
-var CACHE = 'jangirde-v4';
+var CACHE = 'jangirde-v5';
 var PAGES = [
   './', 'index.html', 'style.css', 'guide.html', 'clavier.html',
   'lecons/lecon-01.html', 'lecons/lecon-02.html', 'lecons/lecon-03.html',
   'lecons/lecon-04.html', 'lecons/lecon-05.html',
   'lecons/lecon-06.html', 'lecons/lecon-07.html', 'lecons/lecon-08.html',
   'lecons/lecon-09.html', 'lecons/lecon-10.html', 'lecons/lecon-11.html',
-  'lecons/lecon-12.html', 'lecons/lecon-13.html'
+  'lecons/lecon-12.html', 'lecons/lecon-13.html',
+  'lecons/lecon-14.html', 'lecons/lecon-15.html', 'lecons/lecon-16.html',
+  'lecons/lecon-17.html', 'lecons/lecon-18.html', 'lecons/lecon-19.html',
+  'lecons/lecon-20.html'
 ];
 self.addEventListener('install', function (e) {
   e.waitUntil(caches.open(CACHE).then(function (c) { return c.addAll(PAGES); }));
