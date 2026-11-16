@@ -8,10 +8,11 @@
   }
   btn.addEventListener('click', function () {
     if (!('caches' in window)) { state.textContent = 'Non pris en charge par ce navigateur.'; return; }
-    caches.open('jangirde-v1').then(function (c) {
+    caches.open('jangirde-v2').then(function (c) {
       return c.addAll([
         './', 'index.html', 'style.css', 'guide.html', 'clavier.html',
-        'lecons/lecon-01.html', 'lecons/lecon-02.html', 'lecons/lecon-03.html'
+        'lecons/lecon-01.html', 'lecons/lecon-02.html', 'lecons/lecon-03.html',
+        'lecons/lecon-04.html', 'lecons/lecon-05.html'
       ]);
     }).then(function () {
       state.textContent = '✓ Leçons enregistrées : lisez-les sans connexion.';
