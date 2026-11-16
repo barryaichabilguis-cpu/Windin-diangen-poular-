@@ -20,9 +20,11 @@ app.js                  Mode hors-ligne (~1 Ko)
 sw.js                   Service worker (~0,7 Ko)
 manifest.webmanifest    Manifeste PWA minimal
 lecons/
-  lecon-01.html         L'alphabet ajami harmonisé
+  lecon-01.html         L'alphabet pular harmonisé (أبجد پُلَرْ)
   lecon-02.html         Les salutations
   lecon-03.html         Les nombres de 1 à 10
+regles-transcription.md Règles Labo4 de transcription (référence officielle)
+clavier.html            Clavier Carambolfulbhe (Keyman)
 ```
 
 ## Utiliser le site
@@ -38,12 +40,13 @@ nécessite un serveur — il ne s'active pas en ouvrant le fichier directement.
 3. Ajoutez un bloc « carte » pour la nouvelle leçon dans `index.html` (copiez un bloc existant).
 4. Ajoutez le chemin de la leçon dans les tableaux `PAGES` de `sw.js` et `app.js`.
 
-## Important — contenu d'exemple
+## Transcription
 
-Les trois leçons fournies sont des **modèles d'exemple** : les conventions d'écriture ajami
-harmonisée et les formes dialectales (Fuuta Jalon, Maasina…) varient selon les régions.
-Faites valider le contenu par vos enseignants avant diffusion, puis remplacez ou complétez
-les leçons en suivant la procédure ci-dessus.
+Tout le contenu en écriture arabe suit les **règles Labo4 — Pular arabique harmonisé**
+fournies par le concepteur de l'alphabet : voir `regles-transcription.md`.
+Règles clés : mb = نب (jamais مب), toute voyelle portée (أَ إِ أُ أٝ إࣹ),
+e s'écrit ࣹ, pas de ء final, pas de ي final sans ii/ee, police standard harmonisée
+(Fulani Zain Naskh uniquement sur demande).
 
 ## Déploiement
 
