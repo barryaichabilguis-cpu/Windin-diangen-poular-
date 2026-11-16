@@ -8,7 +8,7 @@
   }
   btn.addEventListener('click', function () {
     if (!('caches' in window)) { state.textContent = 'Non pris en charge par ce navigateur.'; return; }
-    caches.open('jangirde-v6').then(function (c) {
+    caches.open('jangirde-v7').then(function (c) {
       return c.addAll([
         './', 'index.html', 'style.css', 'guide.html', 'clavier.html',
         'lecons/lecon-01.html', 'lecons/lecon-03.html',
@@ -19,6 +19,12 @@
   'lecons/lecon-14.html', 'lecons/lecon-15.html', 'lecons/lecon-16.html',
   'lecons/lecon-17.html', 'lecons/lecon-18.html', 'lecons/lecon-19.html',
   'lecons/lecon-20.html'
+  'lecons/lecon-21.html'
+  'lecons/lecon-22.html'
+  'lecons/lecon-23.html'
+  'lecons/lecon-24.html'
+  'lecons/lecon-25.html'
+  'lecons/lecon-26.html'
       ]);
     }).then(function () {
       state.textContent = '✓ Leçons enregistrées : lisez-les sans connexion.';
