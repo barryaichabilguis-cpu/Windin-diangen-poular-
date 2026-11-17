@@ -8,13 +8,14 @@
   }
   btn.addEventListener('click', function () {
     if (!('caches' in window)) { state.textContent = 'Non pris en charge par ce navigateur.'; return; }
-    caches.open('jangirde-v8').then(function (c) {
+    caches.open('jangirde-v9').then(function (c) {
       return c.addAll([
         './',
         'index.html',
         'style.css',
         'guide.html',
         'clavier.html',
+        'coran.html',
         'lecons/lecon-01.html',
         'lecons/lecon-03.html',
         'lecons/lecon-04.html',
