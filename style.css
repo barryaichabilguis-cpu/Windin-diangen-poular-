@@ -25,3 +25,5 @@ th{background:#e7f1ec;color:#0d5c46}
 .fr{font-size:.85rem;color:#5a6b63;direction:ltr;text-align:left}
 .ok{color:#0d5c46;font-weight:700}
 footer{background:#0a4a38;color:#cfe5dc;text-align:center;padding:1rem;font-size:.8rem;margin-top:2rem}
+.arabic{font-size:1.15em;direction:rtl;unicode-bidi:embed;display:inline-block;margin:0 .2em}
+.note{background:#fff8e1;border-right:4px solid #ffc107;padding:.8em;margin:1em 0}
