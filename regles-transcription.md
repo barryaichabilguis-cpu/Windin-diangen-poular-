@@ -148,12 +148,12 @@ Depuis 1966, la transcription latine est la norme courante du peul. L'ajami arab
 Lexique de référence (français → pular → harmonisé)
 Français | Latin (peul) | Harmonisé
 terre | leydi | لَيْدِ
-ciel | asamaa, kammu | أَسَنَا ، كَنُّ
+ciel | asamaa, kammu | أَسَمَاءُ ، كَمُّ
 eau | ndiyam | ندِيَامْ
 hirondelle | bilibiliiru | بِلِبِلِيرُ
 hibou | durudukku | دُرُدُكُّ
 garçon | gorko (pl. worɓe) | گٝرْكٝ / وُرْࢠࣹ
-femme | debbo (pl. rewɓe) | دَبّٝ / رَوْࢠࣹ
+femme | debbo (pl. rewɓe) | دࣹبّٝ / رࣹوْࢠࣹ
 homme | nedɗo / gimɗo (pl. yimɓe) | نَطّٝ / گِنْطٝ / يِنْࢠࣹ
 enfant | paykun (pl. biɓɓe) | پَتْكُنْ / بِࢠّࣹ
 mère | neene | نࣹنࣹ
