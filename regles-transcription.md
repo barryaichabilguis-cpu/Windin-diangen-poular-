@@ -1,278 +1,191 @@
-# Règles de transcription Labo4 — Pular arabique harmonisé
+Labo4 — Règles de transcription et grammaire
+Pular (arabique harmonisé) ↔ Fulah latin — transcription bidirectionnelle
+Baba Ibrahim Barry — concepteur du clavier CaramBolfubhe et créateur du Labo4
 
-Document de référence fourni par le concepteur de l'alphabet et du clavier Carambolfulbhe.
-Appliquées par défaut sur tout le contenu du site.
+1. Variété de référence
+Le pular de référence est celui du Fouta Djallon (Guinée). Les textes d'autres variétés (Rowwad, Sénégal/Mauritanie, etc.) sont transcrits tels quels, sans normalisation, avec signalement des particularités.
 
----
-
-## 1. Principe général
-
-La transcription se fait entre :
-
-- latin pular → arabe harmonisé
-- arabe harmonisé → latin pular
-
-On utilise la police standard harmonisée par défaut.
-La police Fulani Zain Naskh n'est utilisée que sur demande explicite.
-
-## 2. Alphabet harmonisé
-
-**Lettres simples**
-
+2. Alphabet harmonisé (29 lettres)
+Lettres simples (25)
 ا ڃ پ ي ت ر و ق ل ك ج ه گ ف د س ط ݧ م ن ب ࢠ ݖ ݝ ء
+Digrammes prénasalisés (4)
+ند (nd) — نب (mb) — نگ (ng) — نج (nj)
+Arabe | Latin
+ا a / ʔ
+ݧ ñ
+ڃ ƴ
+م m
+پ p
+ن n
+ي y
+ب b
+ت t
+ࢠ ɓ
+ر r
+ݖ c
+و w
+ݝ ŋ
+ق q
+ء ʔ
+ل l
+ند nd
+ك k
+نب mb
+ج j
+نگ ng
+ه h
+نج nj
+گ g
+ط ɗ
+ف f
+د d
+س s
+— —
 
-**Digrammes prénasalisés**
+3. Voyelles et signes
+Voyelle | Signes | Nom pular | Nom arabe
+a | َ | Poccal | fatha
+i | ِ | Piccal | kasra
+u | ُ / ࣸ | Tural | damma
+e | ࣹ / ٜ / ٖ | Teral | damma bas
+o | ٝ / ٗ / ࣷ | Toral | damma haut
+sukun | ْ | Kowal | sukun
+shadda | ّ | Ciddal | shadda
 
-- ند = nd
-- نب = mb
-- نگ = ng
-- نج = nj
+Règle : e s'écrit toujours avec ࣹ. Table des voyelles du ɓ : ࢠَ ࢠِ ࢠُ ࢠࣹ ࢠٝ = ɓa ɓi ɓu ɓe ɓo.
+Aucune voyelle seule sans support en début de mot
+a = أَ ; u = أُ ; o = أٝ ; i = إِ ; e = إࣹ
 
-**Correspondances essentielles**
+4. Le e : ءࣹ vs إࣹ
+ءࣹ = e isolé = conjonction de coordination (« et »). Ex. : سِرَ ءࣹ سَارَ ، يَهُگٝلْ ءࣹ أَرُگٝلْ
+إࣹ = e non isolé = préposition, particule. Ex. : هِمٝ إࣹ جَمْ ، هِمٝ إࣹ گٝلّࣹ
+Supports en cas de hiatus
+Après consonne vocalisée en o/u, si o/u suit → ٶ / ؤ. Ex. : سَبُؤنْ ، لَنْپُؤٝنْ
+Après consonne vocalisée en a/i, si a/i suit → أ / إ. Ex. : لَبَأٝنْ ، دَابࣹأٝن
+Hamza interne : ٔ (au-dessus) pour a/u/o ; ٕ (en dessous) pour i/e ; support de prolongation → ؤ / و. Ex. : سَلَـٔٝنْ ، بَابَـٕࣹنْ ، سُلُؤٝنْ
 
-| Arabe | Latin | Arabe | Latin |
-|---|---|---|---|
-| ا | a / ʔ | ݧ | ñ |
-| ڃ | ƴ | م | m |
-| پ | p | ن | n |
-| ي | y | ب | b |
-| ت | t | ࢠ | ɓ |
-| ر | r | ݖ | c |
-| و | w | ݝ | ŋ |
-| ق | q | ء | ʔ |
-| ل | l | ط | ɗ |
-| ك | k | د | d |
-| ج | j | ند | nd |
-| ه | h | نب | mb |
-| گ | g | نگ | ng |
-| ف | f | نج | nj |
-| س | s | | |
+5. Allongements (deux temps, pas plus)
+aa = آ ; ii = إِي ; uu = أُو ; ee = إࣹي ; oo = أٝو
+Pas de sukun sur le و et le ي d'allongement ; le signe de voyelle reste sur le premier support.
+Pas de prolongation de 4 ou 6 temps (tajwid).
+Quand و/ي suit immédiatement : ٝ → oo ; ࣹ → ee. Ex. : نࣹيد ، دُوࢠِ ، گٝلّࣹيجِ
+Après un allongement aa suivi d'un hamza, le hamza est porté par ىٔ. Ex. : haa'nde → هَاىٔندࣹ
+Lexique : jii'nde → جِيندࣹ ; huunde → هُوندࣹ
 
-## 3. Règle prioritaire : aucune voyelle seule sans support
+6. Nun et prénasalisation
+Début de mot : pas de sukun → ندَ ، نجُ ، نبِ ، نگࣹ
+Milieu, non suivi d'un autre nun : pas de sukun → بِنْدِ ، جَنْگَ ، مَنْبَ
+Milieu, suivi d'un autre nun : sukun obligatoire → لَنْندَلْ ، بِنْنبِ ، جُنْنجُ
+Nun coda devant consonne → نْ + consonne (wangagol → وَنْگَگٝلْ) ; digramme prénasalisé → pas de sukun (nga → نگَ)
+mb s'écrit toujours نب, jamais مب. Ex. : mbatu → نبَتُ ; mbeleeɗe → نبࣹلࣹيطࣹ ; hommbo → هٝمْنبٝ
 
-En arabe harmonisé, aucune voyelle pular ne s'écrit seule sans support au-dessus ou en dessous.
+7. Mots pular natifs vs mots arabes
+Natifs : pas de tanwiin, pas de doublement de voyelle, syllabe fermée = voyelle + sukun. Ex. : ݖٝلُنْ ، كٝرُنْ ، كٝسَنْ ، بࣹلࣹنْ
+Mots arabes contenant une lettre hors alphabet (ث ح خ ذ ز ش ص ض ظ ع غ ة ى) : conservés tels quels. Ex. : محمد ، إبراهيم ، موسى ، عيسى ، مريم ، الجنة ، جهنم
 
-En début de mot, la voyelle prend obligatoirement un hamza support :
-
-| Voyelle | Écriture |
-|---|---|
-| a | أَ |
-| u | أُ |
-| o | أٝ |
-| i | إِ |
-| e | إࣹ |
-
-Donc :
-
-- إٖنْ ✅
-- ٖنْ ❌
-
-Interdits :
-
-- ❌ َ seul
-- ❌ ِ seul
-- ❌ ُ seul
-- ❌ ٝ seul
-- ❌ ࣹ seul
-
-**Règle absolue : jamais ٝ sans support.**
-
-## 4. Voyelles et signes
-
-| Voyelle | Signes | Nom pular |
-|---|---|---|
-| a | َ | Poccal |
-| i | ِ | Piccal |
-| u | ُ / ࣸ | Tural |
-| e | ࣹ / ٜ / ٖ | Teral |
-| o | ٝ / ٗ / ࣷ | Toral |
-| sukun | ْ | Kowal |
-| shadda | ّ | Ciddal |
-
-Équivalences :
-
-- o = ٝ = ٗ = ࣷ
-- e = ࣹ = ٜ = ٖ
-- u = ُ = ࣸ
-
-Règle de belle écriture : e s'écrit toujours avec ࣹ.
-
-## 5. Le e : ءࣹ vs إࣹ
-
-- **ءࣹ** = e isolé = conjonction « et ». Sert à unir deux noms, verbes, adjectifs, ou citer une liste.
-  Exemples : سِرَ ءࣹ سَارَ ، يَهُگٝلْ ءࣹ أَرُگٝلْ
-- **إࣹ** = e non isolé = préposition, particule, etc.
-  Exemples : هِمٝ إࣹ جَمْ ، هِمٝ إࣹ گٝلّࣹ
-
-## 6. Supports en cas de hiatus
-
-**Après consonne déjà vocalisée en o/u** : si o ou u suit une consonne portant déjà o/u → support ٶ / ؤ.
-Exemples : سَبُؤنْ ، لَنْپُؤٝنْ
-
-**Après consonne déjà vocalisée en a/i** : si a ou i suit une consonne déjà vocalisée → support أ / إ.
-Exemples : لَبَأٝنْ ، دَابࣹأٝن
-
-**Hamza interne**
-
-- ٔ au-dessus pour a / u / o
-- ٕ en dessous pour i / e
-- Si support est une consonne de prolongation : ؤ / و
-
-Exemples : سَلَــٔٝنْ ، بَابَـٕࣹنْ ، سُلُؤٝنْ
-
-## 7. Allongements
-
-Allongement de deux temps seulement, pas plus.
-
-| Allongement | Écriture |
-|---|---|
-| aa | آ |
-| ii | إِي |
-| uu | أُو |
-| ee | إࣹي |
-| oo | أٝو |
-
-Règles :
-
-- Pas de sukun sur و et ي d'allongement.
-- Le signe de voyelle reste sur le premier support.
-- Pas de prolongation de 4 ou 6 temps comme en tajwid.
-
-Quand و / ي suit immédiatement :
-
-- ٝ → oo
-- ࣹ → ee
-
-Exemples corrects :
-
-- نࣹيد ✅
-- دُوࢠِ ✅
-- گٝلّࣹيجِ ✅
-
-## 8. Groupes consonantiques et prénasalisation
-
-**Règle du nun**
-
-- En début de mot : pas de sukun → ندَ ، نجُ ، نبِ ، نگࣹ
-- Au milieu, non suivi d'un autre nun : pas de sukun → بِنْدِ ، جَنْگَ ، مَنْبَ
-- Au milieu, suivi d'un autre nun : sukun obligatoire → لَنْندَلْ ، بِنْنبِ ، جُنْنجُ
-
-**Nun coda vs digramme**
-
-- Nun coda devant consonne → نْ + consonne. Exemple : wangagol → وَنْگَگٝلْ
-- Digramme prénasalisé → pas de sukun. Exemple : nga → نگَ
-
-**Règle prioritaire mb**
-
-- Latin → arabe harmonisé : mb s'écrit نب, jamais مب.
-- Arabe harmonisé → latin : نب se lit mb.
-
-Exemples :
-
-- mbatu → نبَتُ
-- mbileejo → نبِلࣹيجٝ
-- mbeleeɗe → نبࣹلࣹيطࣹ
-
-## 9. Mots pular natifs vs mots arabes
-
-**Mots pular natifs**
-
-- Pas de tanwiin
-- Pas de doublement de voyelle
-- Syllabe fermée = voyelle + sukun
-  Exemples : ݖٝلُنْ ، كٝرُنْ ، كٝسَنْ ، بࣹلࣹنْ
-
-**Mots arabes ou d'origine arabe**
-
-Si un mot contient une lettre hors alphabet harmonisé, on le garde tel quel en orthographe arabe d'origine.
-
-Lettres non harmonisées : ث ح خ ذ ز ش ص ض ظ ع غ ة ى
-
-Exemples à conserver : محمد ، إبراهيم ، موسى ، عيسى ، مريم ، جبريل ، الجنة ، جهنم.
-
-## 10. Ciddal et sukun
-
-**Ciddal ّ** — la consonne est doublée.
-Exemples : پٝݖَّلْ = Poccal ، ݖِدَّلْ = Ciddal ، فُطّٝرْتَا = fuɗɗortaa
-
-**Kowal ْ** — la consonne n'a pas de voyelle.
-Exemples : کٝوَلْ = kowal ، بِنْدٝلْ = bindol ، پُلَرْ = Pular
-
+8. Ciddal et Kowal
+Ciddal ّ : consonne doublée. Ex. : پٝݖَّلْ = Poccal ; ݖِدَّلْ = Ciddal ; فُطّٝرْتَا = fuɗɗortaa
+Kowal ْ : consonne sans voyelle. Ex. : کٝوَلْ = kowal ; بِنْدٝلْ = bindol ; پُلَرْ = Pular.
 Règle : on ne commence jamais un mot par un sukun.
 
-## 11. Interdictions de transcription
+9. Interdictions
+Jamais de ي final si le latin n'a pas ii ou ee (i bref final → ِ ; e bref final → ࣹ).
+Jamais de ء final ( Possible seulement à l'initiale isolée ءࣹ ou à l'intérieur).
+Jamais de ٝ sans support (début de mot : أٝ ; après consonne : portée par elle).
+Le hamza ء ne porte jamais de sukun (ءْ interdit).
 
-**11.1 Pas de ي final non justifié**
+10. Corrections lexicales
+Joomi → جٝومِ (❌ جٝومِي)
+hommbo → هٝمْنبٝ (❌ هٝمَبٝ)
+ruttaa → رُتَّا (❌ رُتَّاءَ)
 
-On ne met jamais ي final si le latin ne contient pas ii ou ee.
+11. Règle 19 — تَگِ réservé à Allah ; فٖوْنِ pour l'humain
+تَگِ / tagi (« créer ») est réservé à Allah seul.
+Pour toute action humaine de fabrication, conception, réalisation : فٖوْنِ / fewni.
 
-- i bref final → ِ seul
-- e bref final → ࣹ seul
+12. Mise en forme des réponses
+Règle : mettre toujours en gras les textes transcrits (arabe harmonisé) et les textes traduits (pular), dans toutes les réponses du Labo4.
 
-Le ي final n'est autorisé que pour ii ou ee.
+13. Commandes du Labo
+Français | Harmonisé | Latin
+reprends | فُطِّتٝ | fuɗɗito
+traduire | فِرُ | firu
+transcrire | وَيْلُ | waylu
 
-**11.2 Pas de ء final**
+14. Police standard vs Fulani Zain Naskh
+Standard (défaut) | Fulani Zain Naskh
+ݝ ڠ
+ݖ ٺ
+ࢠ ٻ
+ݧ ڼ
+ٝ ٗ
+ࣹ ٖ
 
-Aucun mot pular harmonisé ne se termine par ء.
+Règle : police standard harmonisée par défaut ; Fulani Zain Naskh uniquement sur demande explicite.
+La conversion standard ↔ Fulani Zain Naskh est assurée par le clavier CaramBolfubhe, conçu par Baba Ibrahim Barry.
 
-- ء possible à l'initiale isolée (ءࣹ) ou à l'intérieur.
-- Jamais en finale.
+15. Pronoms en / men (section 16 du Labo4)
+Le pular distingue deux formes de « nous » :
+inclusif | en | « nous (toi + moi) » | إࣹنْ
+exclusif | men | « nous (eux + moi, mais pas toi) » | مࣹنْ
+exclusif emphatique | menen | « nous-mêmes » | مࣹنࣹنْ
+possessif | am / amen | mon / notre | أَمْ / أَمࣹنْ
 
-**11.3 Pas de ٝ sans support**
+Le « Nous » divin se transcrit toujours par men / menen (مࣹنْ / مࣹنࣹنْ), jamais par en — car le « نحن » de Dieu est un nous de majesté ; employer en (inclusif) serait une faute théologique.
 
-- En début de mot : أٝ
-- Après consonne : ـٝ
-- Aucun ٝ isolé.
+16. Grammaire — croisée avec la grammaire latine du peul (Wikipédia)
+Confirmations
+Prénasalisées mb, nd, ng, nj « s'articulent en un seul son » → digrammes نب، ند، نگ، نج une seule unité.
+Pronoms : 1-excl men (مࣹنْ) / 1-incl en (إࣹنْ) / 3-pl ɓe (ࢠࣹ) ; O (أٝ), on (أُنْ). Conjugaison de arugol : Mi ari, A ari, O ari, Men ari, En ari, On ari, Ɓe ari.
+Allongements aa/ee/ii/oo/uu marqués par redoublement → آ، ࣹي، ي، ٝو، و (deux temps).
+Implosives ɓ/ɗ/ punti ƴ (air inspiré) → ࢠ، ط، ڃ ; c (« tch ») → ݖ ; ñ → ݧ.
+Voyelles : brèves a/e/i/o/u (u = « ou ») ; une voyelle devant une terminaison en r, n n'a pas besoin d'être redoublée (cohérent avec آ simple devant coda).
+Divergences d'orthographe
+La table latine écrit ny pour ñ ; norme Labo4 : ݧ = ñ.
+Wikipédia vs Fouta Djallon : ndiyan / ndiyam ; leidi / leydi ; nyaaamde/nàaamde. Transcrire la source telle quelle ; viser la forme du Fouta en production propre.
+L'ajami et les voyelles (argument identitaire)
+Depuis 1966, la transcription latine est la norme courante du peul. L'ajami arabe traditionnel ne note pas les voyelles. Le système harmonisé Labo4 va plus loin : il note toutes les voyelles avec support (hamza, consonnes, signes ٝ، ࣹ) — sa valeur ajoutée et son argument identitaire.
+Lexique de référence (français → pular → harmonisé)
+Français | Latin (peul) | Harmonisé
+terre | leydi | لَيْدِ
+ciel | asamaa, kammu | أَسَنَا ، كَنُّ
+eau | ndiyam | ندِيَامْ
+hirondelle | bilibiliiru | بِلِبِلِيرُ
+hibou | durudukku | دُرُدُكُّ
+garçon | gorko (pl. worɓe) | گٝرْكٝ / وُرْࢠࣹ
+femme | debbo (pl. rewɓe) | دَبّٝ / رَوْࢠࣹ
+homme | nedɗo / gimɗo (pl. yimɓe) | نَطّٝ / گِنْطٝ / يِنْࢠࣹ
+enfant | paykun (pl. biɓɓe) | پَتْكُنْ / بِࢠّࣹ
+mère | neene | نࣹنࣹ
+manger | ñaamugol | ݧَانُگٝلْ
+étudier | janngugol | جَنْگُگٝلْ
+boire | yarugol | يَرُگٝلْ
+grand | mawɗo | نبَوْطٝ
+jeu | fijundaaru | فِجُنْدَارُ
+nuit | jemma | جَنَّ
+jour | ñaalorma | ݧَالُرْنَا
+lundi | Altine | أَلْتِنࣹ
+vendredi | Aljuma | أَلْجُنَا
+samedi | Aset (asawe en Guinée) | أَسَتْ / أَسَوࣹ
+dimanche | Alaat | أَلَاتْ
+courage | wakkilaare (wakkili) | وَكِّلَارࣹ
+aimer | yiidugol | يِيدُگٝلْ
+merci | jaaraama | جَارَانَا
+nom | innde (pl. inde) | إِنْندࣹ
 
-## 12. Corrections lexicales importantes
-
-| Mot | Forme correcte |
-|---|---|
-| Joomi | جٝومِ |
-| hommbo | هٝمْنبٝ |
-| ruttaa | رُتَّا |
-
-Formes erronées :
-
-- جٝومِي ❌
-- هٝمَبٝ ❌
-- رُتَّاءَ ❌
-
-## 13. Commandes du Labo
-
-| Français | Harmonisé | Latin |
-|---|---|---|
-| reprends | فُطِّتٝ | fuɗɗito |
-| traduire | فِرُ | firu |
-| transcrire | وَيْلُ | waylu |
-
-## 14. Police standard vs Fulani Zain Naskh
-
-| Standard | Fulani Zain Naskh |
-|---|---|
-| ݝ | ڠ |
-| ݖ | ٺ |
-| ࢠ | ٻ |
-| ݧ | ڼ |
-| ٝ | ٗ |
-| ࣹ | ٖ |
-
-Règle : standard par défaut, Fulani Zain Naskh uniquement sur demande.
-
-## 15. Checklist rapide avant transcription
-
-1. Toute voyelle a-t-elle un support ?
-2. Le e est-il écrit ࣹ ?
-3. Le o est-il toujours porté, jamais isolé ?
-4. mb est-il écrit نب ?
-5. Pas de ي final sans ii/ee ?
-6. Pas de ء final ?
-7. Les allongements sont-ils de deux temps, sans sukun sur و/ي ?
-8. Les digrammes ند/نب/نگ/نج sont-ils corrects ?
-9. Les mots arabes hors alphabet sont-ils conservés tels quels ?
-10. Les corrections lexicales (Joomi, hommbo, ruttaa) sont-elles appliquées ?
-
----
+17. Checklist avant transcription
+Toute voyelle a-t-elle un support ?
+e écrit ࣹ ? o toujours porté, jamais isolé ?
+mb écrit نب ? Digrammes ند/نگ/نج corrects, sans sukun à l'initiale ?
+Pas de ي final sans ii/ee ? Pas de ء final ?
+Allongements de deux temps, sans sukun sur و/ي ?
+Mots arabes hors alphabet conservés tels quels ?
+Corrections lexicales (Joomi, hommbo, ruttaa) appliquées ?
+« Nous » divin = مࣹنْ/مࣹنࣹنْ, jamais إࣹنْ ?
+tagi réservé à Allah ; fewni pour l'humain ?
+Polices standard (défaut) et texte en gras dans les réponses ?
 
 والله تعالى أعلم.
-كٝ اللهُ تٝووُطٝئٝن ࢠُرِ أَنْدُ دٖ.
+كٝ اللهُ تٝووُطٗئٗن ٻُرِ أَنْدُ دٖ.
+Labo4 — Règles de transcription et grammaire, poular arabique à caractères harmonisés ↔ fulah latin.
+Baba Ibrahim Barry — concepteur du clavier CaramBolfubhe et créateur du Labo4. Police standard par défaut ; Fulani Zain Naskh sur demande explicite (bouton ou clavier).

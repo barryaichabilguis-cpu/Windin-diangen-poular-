@@ -23,7 +23,7 @@ lecons/
   lecon-01.html         L'alphabet pular harmonisé (أبجد پُلَرْ)
   lecon-02.html         Les salutations
   lecon-03.html         Les nombres de 1 à 10
-regles-transcription.md Règles Labo4 de transcription (référence officielle)
+regles-transcription.md, **labo4.html** (page publique) Règles Labo4 de transcription (référence officielle)
 clavier.html            Clavier Carambolfulbhe (Keyman)
 ```
 
@@ -43,7 +43,7 @@ nécessite un serveur — il ne s'active pas en ouvrant le fichier directement.
 ## Transcription
 
 Tout le contenu en écriture arabe suit les **règles Labo4 — Pular arabique harmonisé**
-fournies par le concepteur de l'alphabet : voir `regles-transcription.md`.
+fournies par le concepteur de l'alphabet : voir `regles-transcription.md, **labo4.html** (page publique)`.
 Règles clés : mb = نب (jamais مب), toute voyelle portée (أَ إِ أُ أٝ إࣹ),
 e s'écrit ࣹ, pas de ء final, pas de ي final sans ii/ee, police standard harmonisée
 (Fulani Zain Naskh uniquement sur demande).
