@@ -40,6 +40,13 @@ nécessite un serveur — il ne s'active pas en ouvrant le fichier directement.
 3. Ajoutez un bloc « carte » pour la nouvelle leçon dans `index.html` (copiez un bloc existant).
 4. Ajoutez le chemin de la leçon dans les tableaux `PAGES` de `sw.js` et `app.js`.
 
+## Terminologie bilingue (en cours)
+
+`terminologie.html` publie la **Terminologie bilingue de l'enseignement-apprentissage
+de la lecture initiale (Pulaar-Français)** (Lecture Pour Tous, 2020, règles Labo4),
+texte arabe harmonisé **tel quel** et en gras (cellules `td.ar`). Publication progressive :
+sections reçues en ligne (651 entrées) ; complétion dès réception des sections manquantes.
+
 ## Transcription
 
 Tout le contenu en écriture arabe suit les **règles Labo4 — Pular arabique harmonisé**
