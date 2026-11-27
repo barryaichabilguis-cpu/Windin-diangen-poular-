@@ -1,7 +1,10 @@
 /* Bouton « Modifier la leçon » — édition locale dans la page, sans serveur ni ressource externe.
    L'enregistrement produit une copie HTML téléchargée ; l'envoyer par email au responsable pour publication. */
 (function () {
-  if (!/\/lecons\//.test(location.pathname)) return;
+  var DOC_PAGES = ['labo4.html', 'terminologie.html', 'coran.html', 'coran-complet.html'];
+  var isLecon = /\/lecons\//.test(location.pathname);
+  var page = location.pathname.split('/').pop() || 'index.html';
+  if (!isLecon && DOC_PAGES.indexOf(page) === -1) return;
   var main = document.querySelector('main');
   if (!main) return;
 
@@ -10,7 +13,7 @@
 
   var edit = document.createElement('button');
   edit.className = 'btn'; edit.type = 'button';
-  edit.textContent = '\u270f\ufe0f Modifier la leçon';
+  edit.textContent = isLecon ? '\u270f\ufe0f Modifier la leçon' : '\u270f\ufe0f Modifier ce document';
 
   var quit = document.createElement('button');
   quit.className = 'btn secondary'; quit.type = 'button'; quit.style.display = 'none';

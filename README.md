@@ -49,7 +49,7 @@ sections reçues en ligne (651 entrées) ; complétion dès réception des secti
 
 ## Bouton « Modifier la leçon » (`edit.js`)
 
-Chaque leçon intègre un bouton **✏️ Modifier la leçon** (`edit.js`, ~2,5 Ko, aucune ressource
+Les 40 leçons, ainsi que labo4.html, terminologie.html, coran.html et coran-complet.html, intègrent un bouton **✏️ Modifier** (`edit.js`, ~2,5 Ko, aucune ressource
 externe) : le texte devient éditable directement dans le navigateur (y compris l'écriture
 arabe harmonisée). **💾 Enregistrer la copie modifiée** télécharge une copie HTML complète ;
 envoyez-la par email (babaibrahimsalama@gmail.com) pour publication sur le site.
