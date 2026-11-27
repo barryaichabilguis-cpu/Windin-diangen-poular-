@@ -27,3 +27,7 @@ th{background:#e7f1ec;color:#0d5c46}
 footer{background:#0a4a38;color:#cfe5dc;text-align:center;padding:1rem;font-size:.8rem;margin-top:2rem}
 .arabic{font-size:1.15em;direction:rtl;unicode-bidi:embed;display:inline-block;margin:0 .2em}
 .note{background:#fff8e1;border-right:4px solid #ffc107;padding:.8em;margin:1em 0}
+
+/* Barre de modification des leçons */
+.editbar{display:flex;gap:.5em;flex-wrap:wrap;align-items:center;margin:.8em 0}
+.editbar .btn{margin:0}
