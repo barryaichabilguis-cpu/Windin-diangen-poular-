@@ -90,7 +90,7 @@ Règle : on ne commence jamais un mot par un sukun.
 
 9. Interdictions
 Jamais de ي final si le latin n'a pas ii ou ee (i bref final → ِ ; e bref final → ࣹ).
-Jamais de ء final ( Possible seulement à l'initiale isolée إࣹ ou à l'intérieur).
+Jamais de ء final ; jamais de ء en début de mot (أَ / إِ / أُ / إࣹ / أٝ) ; seulement à l’intérieur.
 Jamais de ٝ sans support (début de mot : أٝ ; après consonne : portée par elle).
 Le hamza ء ne porte jamais de sukun (ءْ interdit).
 
