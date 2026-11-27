@@ -56,8 +56,8 @@ Règle : e s'écrit toujours avec ࣹ. Table des voyelles du ɓ : ࢠَ ࢠِ �
 Aucune voyelle seule sans support en début de mot
 a = أَ ; u = أُ ; o = أٝ ; i = إِ ; e = إࣹ
 
-4. Le e : ءࣹ vs إࣹ
-ءࣹ = e isolé = conjonction de coordination (« et »). Ex. : سِرَ ءࣹ سَارَ ، يَهُگٝلْ ءࣹ أَرُگٝلْ
+4. Le e : إࣹ (jamais ء en début de mot)
+ءࣹ = e isolé = conjonction de coordination (« et »). Ex. : سِرَ إࣹ سَارَ ، يَهُگٝلْ إࣹ أَرُگٝلْ
 إࣹ = e non isolé = préposition, particule. Ex. : هِمٝ إࣹ جَمْ ، هِمٝ إࣹ گٝلّࣹ
 Supports en cas de hiatus
 Après consonne vocalisée en o/u, si o/u suit → ٶ / ؤ. Ex. : سَبُؤنْ ، لَنْپُؤٝنْ
@@ -90,7 +90,7 @@ Règle : on ne commence jamais un mot par un sukun.
 
 9. Interdictions
 Jamais de ي final si le latin n'a pas ii ou ee (i bref final → ِ ; e bref final → ࣹ).
-Jamais de ء final ( Possible seulement à l'initiale isolée ءࣹ ou à l'intérieur).
+Jamais de ء final ( Possible seulement à l'initiale isolée إࣹ ou à l'intérieur).
 Jamais de ٝ sans support (début de mot : أٝ ; après consonne : portée par elle).
 Le hamza ء ne porte jamais de sukun (ءْ interdit).
 
