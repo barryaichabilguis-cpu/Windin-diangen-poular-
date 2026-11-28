@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Administration — Jangirde woɗnde</title>
+<link rel="stylesheet" href="style.css">
+<style>
+#admin-box{max-width:900px;margin:0 auto}
+input,textarea{font-family:inherit;font-size:1em;border:1px solid #999;border-radius:6px;padding:.5em;width:100%;box-sizing:border-box;margin:.3em 0}
+textarea{min-height:55vh;direction:ltr;text-align:left;font-family:monospace;font-size:.85em;white-space:pre}
+.filelist{list-style:none;padding:0}
+.filelist li{padding:.25em 0;border-bottom:1px dotted #bbb;display:flex;gap:.5em;align-items:center;flex-wrap:wrap}
+.filelist button{margin:0}
+.pill{display:inline-block;background:#eee;border-radius:999px;padding:.05em .6em;font-size:.8em}
+.crumb{word-break:break-all}
+</style>
+</head>
+<body>
+<header>
+  <h1>🔐 Administration du site</h1>
+  <p>Connexion administrateur — chaque enregistrement est publié sur GitHub, en ligne en ~1 minute</p>
+</header>
+<nav>
+  <a href="index.html">الرئيسية — Accueil</a>
+</nav>
+<main id="admin-box">
+  <section id="login">
+    <p class="fr">Connectez-vous avec un <b>jeton d'accès personnel GitHub</b> (fine-grained) autorisé sur le dépôt <b>Windin-diangen-poular-</b> avec la permission <b>Contenus : lecture et écriture</b>. Le jeton reste uniquement dans votre navigateur : il n'est jamais enregistré sur le site ni envoyé ailleurs que sur api.github.com.</p>
+    <p class="fr">Créer un jeton : GitHub → Settings → Developer settings → Fine-grained personal access tokens → « Repository access : only Windin-diangen-poular- » → Permissions → Contents : Read and write.</p>
+    <input id="token" type="password" placeholder="github_pat_… ou ghp_…" autocomplete="off">
+    <button class="btn" id="btn-login" type="button">🔓 Se connecter</button>
+    <p id="login-state" class="small"></p>
+  </section>
+
+  <section id="panel" hidden>
+    <p><span class="pill" id="who"></span> <button class="btn secondary" id="btn-logout" type="button">Se déconnecter</button></p>
+    <p class="crumb small">📁 <span id="path"></span></p>
+    <ul class="filelist" id="files"></ul>
+    <button class="btn" id="btn-refresh" type="button">↻ Rafraîchir</button>
+
+    <div id="editor" hidden>
+      <h2 id="edit-title"></h2>
+      <textarea id="edit-content" spellcheck="false"></textarea>
+      <p class="small">Message de commit : <input id="edit-msg" placeholder="Correction de la leçon…"></p>
+      <button class="btn" id="btn-save" type="button">💾 Publier (commit sur main)</button>
+      <button class="btn secondary" id="btn-delete" type="button">🗑 Supprimer ce fichier</button>
+      <button class="btn secondary" id="btn-close" type="button">✖ Fermer</button>
+      <p id="edit-state" class="small"></p>
+    </div>
+
+    <div id="newfile">
+      <h2>Ajouter un contenu</h2>
+      <p class="fr">Nouveau fichier (ex. <code>lecons/lecon-42.html</code> ou <code>une-page.html</code>) :</p>
+      <input id="new-path" placeholder="lecons/lecon-42.html" dir="ltr">
+      <textarea id="new-content" placeholder="Contenu HTML complet de la nouvelle page…" spellcheck="false" dir="ltr"></textarea>
+      <p class="small">Message de commit : <input id="new-msg" placeholder="Ajout de la leçon 42…"></p>
+      <button class="btn" id="btn-create" type="button">➕ Créer et publier</button>
+      <p id="new-state" class="small"></p>
+    </div>
+  </section>
+</main>
+<footer><p>Jangirde woɗnde</p></footer>
+<script>
+(function () {
+  var REPO = 'barryaichabilguis-cpu/Windin-diangen-poular-';
+  var BRANCH = 'main';
+  var API = 'https://api.github.com';
+  var token = '';
+  var curPath = '';
+  var editing = null; // {path, sha}
+
+  var $ = function (id) { return document.getElementById(id); };
+
+  function api(method, path, body, raw, cb) {
+    var xhr = new XMLHttpRequest();
+    xhr.open(method, API + '/repos/' + REPO + (path ? '/' + path : ''));
+    xhr.setRequestHeader('Authorization', 'Bearer ' + token);
+    xhr.setRequestHeader('Accept', raw ? 'application/vnd.github.raw' : 'application/vnd.github+json');
+    if (body) xhr.setRequestHeader('Content-Type', 'application/json');
+    xhr.onload = function () {
+      if (xhr.status >= 200 && xhr.status < 300) {
+        cb(null, raw ? xhr.responseText : (xhr.responseText ? JSON.parse(xhr.responseText) : null));
+      } else {
+        var msg = xhr.status + ' ' + xhr.statusText;
+        try { msg = JSON.parse(xhr.responseText).message || msg; } catch (e) {}
+        cb(msg);
+      }
+    };
+    xhr.onerror = function () { cb('Erreur réseau (connexion à api.github.com impossible)'); };
+    xhr.send(body ? JSON.stringify(body) : null);
+  }
+
+  function b64(s) {
+    var u = new TextEncoder().encode(s), b = '';
+    for (var i = 0; i < u.length; i++) b += String.fromCharCode(u[i]);
+    return btoa(b);
+  }
+
+  function login() {
+    token = $('token').value.trim();
+    if (!token) { $('login-state').textContent = 'Entrez votre jeton.'; return; }
+    $('login-state').textContent = 'Vérification…';
+    api('GET', '', null, false, function (err, repo) {
+      if (err) { $('login-state').textContent = 'Échec : ' + err; token = ''; return; }
+      if (!repo.permissions || !repo.permissions.push) {
+        $('login-state').textContent = 'Ce jeton n\u2019a pas le droit d\u2019écriture sur ce dépôt.'; token = ''; return;
+      }
+      $('login-state').textContent = '';
+      $('login').hidden = true; $('panel').hidden = false;
+      $('who').textContent = '✓ Connecté au dépôt ' + REPO;
+      openDir('');
+    });
+  }
+
+  function openDir(p) {
+    curPath = p;
+    $('path').textContent = p || '(racine)';
+    $('files').innerHTML = '<li>Chargement…</li>';
+    $('editor').hidden = true; editing = null;
+    api('GET', 'contents/' + p + '?ref=' + BRANCH, null, false, function (err, items) {
+      if (err) { $('files').innerHTML = '<li>Erreur : ' + err + '</li>'; return; }
+      if (!Array.isArray(items)) { openFile(p); return; }
+      var ul = $('files'); ul.innerHTML = '';
+      if (p) {
+        var up = document.createElement('li');
+        var ub = document.createElement('button'); ub.className = 'btn secondary'; ub.textContent = '⬆ Dossier parent';
+        ub.onclick = function () { openDir(p.split('/').slice(0, -1).join('/')); };
+        up.appendChild(ub); ul.appendChild(up);
+      }
+      items.sort(function (a, b) { return (a.type === b.type) ? a.name.localeCompare(b.name) : (a.type === 'dir' ? -1 : 1); });
+      items.forEach(function (it) {
+        var li = document.createElement('li');
+        var b = document.createElement('button');
+        b.className = 'btn secondary'; b.type = 'button';
+        b.textContent = (it.type === 'dir' ? '📁 ' : '📄 ') + it.name + (it.type === 'dir' ? '' : ' (' + it.size + ' o)');
+        b.onclick = function () { it.type === 'dir' ? openDir(it.path) : openFile(it.path); };
+        li.appendChild(b); ul.appendChild(li);
+      });
+    });
+  }
+
+  function openFile(path) {
+    api('GET', 'contents/' + path + '?ref=' + BRANCH, null, true, function (err, text) {
+      if (err) { alert('Lecture impossible : ' + err); return; }
+      api('GET', 'contents/' + path + '?ref=' + BRANCH, null, false, function (err2, meta) {
+        editing = { path: path, sha: err2 ? null : meta.sha };
+        $('editor').hidden = false;
+        $('edit-title').textContent = '✏️ ' + path;
+        $('edit-content').value = text;
+        $('edit-msg').value = 'Modification de ' + path;
+        $('edit-state').textContent = '';
+        $('editor').scrollIntoView();
+      });
+    });
+  }
+
+  $('btn-login').onclick = login;
+  $('token').addEventListener('keydown', function (e) { if (e.key === 'Enter') login(); });
+  $('btn-logout').onclick = function () {
+    token = ''; $('token').value = '';
+    $('panel').hidden = true; $('login').hidden = false;
+  };
+  $('btn-refresh').onclick = function () { openDir(curPath); };
+  $('btn-close').onclick = function () { $('editor').hidden = true; editing = null; };
+
+  $('btn-save').onclick = function () {
+    if (!editing) return;
+    var body = {
+      message: $('edit-msg').value || 'Modification via admin',
+      content: b64($('edit-content').value),
+      branch: BRANCH
+    };
+    if (editing.sha) body.sha = editing.sha;
+    $('edit-state').textContent = 'Publication…';
+    api('PUT', 'contents/' + editing.path, body, false, function (err) {
+      $('edit-state').textContent = err ? ('Échec : ' + err) : '✓ Publié sur GitHub — en ligne en ~1 minute.';
+      if (!err) openDir(curPath);
+    });
+  };
+
+  $('btn-delete').onclick = function () {
+    if (!editing || !editing.sha) return;
+    if (!confirm('Supprimer définitivement ' + editing.path + ' ?')) return;
+    api('DELETE', 'contents/' + editing.path, { message: 'Suppression de ' + editing.path, sha: editing.sha, branch: BRANCH }, false, function (err) {
+      $('edit-state').textContent = err ? ('Échec : ' + err) : '✓ Fichier supprimé.';
+      if (!err) { $('editor').hidden = true; editing = null; openDir(curPath); }
+    });
+  };
+
+  $('btn-create').onclick = function () {
+    var p = $('new-path').value.trim();
+    if (!p) { $('new-state').textContent = 'Indiquez le chemin du nouveau fichier.'; return; }
+    var body = {
+      message: $('new-msg').value || ('Ajout de ' + p),
+      content: b64($('new-content').value || ''),
+      branch: BRANCH
+    };
+    $('new-state').textContent = 'Publication…';
+    api('PUT', 'contents/' + p, body, false, function (err) {
+      $('new-state').textContent = err ? ('Échec : ' + err) : '✓ Créé et publié — en ligne en ~1 minute.';
+      if (!err) { $('new-path').value = ''; $('new-content').value = ''; openDir(curPath); }
+    });
+  };
+})();
+</script>
+</body>
+</html>
