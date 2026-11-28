@@ -62,6 +62,14 @@ Le jeton reste dans le navigateur. Permet de modifier n'importe quel fichier, cr
 nouvelles leçons/pages ou supprimer — chaque enregistrement est un commit sur `main`,
 en ligne en ~1 minute via GitHub Pages.
 
+## Administration (`admin.html`)
+
+Page **🔐 Administration** (lien en pied de l'accueil) : connexion avec un **jeton d'accès
+personnel GitHub** (fine-grained, permission *Contenus : lecture et écriture* sur ce dépôt).
+Le jeton reste dans le navigateur. Permet de modifier n'importe quel fichier, créer de
+nouvelles leçons/pages ou supprimer — chaque enregistrement est un commit sur `main`,
+en ligne en ~1 minute via GitHub Pages.
+
 ## Transcription
 
 Tout le contenu en écriture arabe suit les **règles Labo4 — Pular arabique harmonisé**
